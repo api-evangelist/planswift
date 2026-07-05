@@ -1,0 +1,46 @@
+aid: planswift
+url: https://raw.githubusercontent.com/api-evangelist/planswift/refs/heads/main/apis.yml
+name: PlanSwift
+kind: company
+description: PlanSwift is Windows desktop takeoff and estimating software for
+  construction estimators - turning digital plans (PDF/image/CAD) into measurable,
+  countable, exportable material takeoffs and estimates across trades like roofing,
+  concrete, earthwork, flooring, and electrical. PlanSwift is owned by
+  ConstructConnect. IMPORTANT - PlanSwift does NOT publish a public web/REST API.
+  Its developer surface is a desktop extensibility SDK embedded in the Windows
+  application - OLE Automation (COM), an internal scripting engine, and a
+  plugin/starter-pack model - exposed through a password-gated "Under-The-Hood"
+  (U-T-H) tab enabled by contacting ConstructConnect (takeoff@constructconnect.com).
+  The public SDK examples on GitHub target PlanSwift9 and are written in Pascal
+  (2008) and Visual Basic (2010). There is no documented HTTPS base URL, no API
+  keys/OAuth token surface, and no web endpoints to model - this entry is an
+  honest stub reflecting a desktop-plugin/COM SDK, not a web API.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Construction
+- Takeoff
+- Estimating
+- Desktop Software
+- Plugin SDK
+- OLE Automation
+- COM
+- Scripting
+- ConstructConnect
+- No Public Web API
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+common:
+- type: GitHubOrganization
+  url: https://github.com/PlanSwift
+- type: LinkedIn
+  url: https://www.linkedin.com/company/planswift
+- type: Website
+  url: https://www.planswift.com
+- type: Documentation
+  url: https://help.constructconnect.com/planswift-developer-documentation-234
+- type: Plans
+  url: plans/planswift-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

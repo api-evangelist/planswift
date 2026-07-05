@@ -1,0 +1,43 @@
+aid: planswift-plans-pricing
+name: PlanSwift Plans and Pricing
+description: >
+  Per-seat licensing for the PlanSwift Windows desktop takeoff and estimating
+  product (by ConstructConnect). This is PRODUCT licensing, not API/usage pricing -
+  PlanSwift has no metered public web API. Public pricing is inconsistent across
+  third-party listings and ConstructConnect increasingly quotes directly; figures
+  below are the commonly cited public numbers and should be confirmed with a quote.
+currency: USD
+pricingModel: per-seat license
+notes: >
+  The developer/extensibility SDK (OLE Automation, scripting, plugins) ships inside
+  the licensed desktop application; there is no separate API/developer subscription
+  and no published API rate cards or usage tiers. Enabling the developer
+  "Under-The-Hood" tab requires a password from ConstructConnect
+  (takeoff@constructconnect.com), not a paid API plan.
+plans:
+- name: PlanSwift Professional (perpetual, commonly cited)
+  price: 1749.00
+  unit: per license (one-time)
+  billing: one-time
+  includes: First-year updates and support included.
+  renewal: Optional updates + support after year one (commonly cited ~250 USD/license/year).
+  source: https://softwareconnect.com/reviews/planswift/
+- name: PlanSwift Professional (annual, commonly cited)
+  price: 2000.00
+  unit: per user
+  billing: annual
+  includes: Training plus updates and support for the first year.
+  renewal: Optional updates + support after year one (commonly cited ~300 USD/license/year).
+  source: https://www.trustradius.com/products/planswift/pricing
+freeTrial: true
+freeTrialUrl: https://www.planswift.com/free-trial/
+quoteUrl: https://www.constructconnect.com/products/planswift
+sources:
+- url: https://www.trustradius.com/products/planswift/pricing
+  note: Cites ~2,000 USD per user per year.
+- url: https://softwareconnect.com/reviews/planswift/
+  note: Cites ~1,749 USD one-time with first-year support, ~250 USD/yr renewal.
+- url: https://www.constructconnect.com/products/planswift
+  note: ConstructConnect product page - directs to demo/quote; pricing not published.
+- url: https://www.planswift.com/free-trial/
+  note: Free trial of the desktop takeoff software.

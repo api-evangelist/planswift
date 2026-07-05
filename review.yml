@@ -1,0 +1,84 @@
+aid: planswift
+name: PlanSwift
+review:
+  question: Does PlanSwift expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. PlanSwift exposes no public network API
+    of any kind - REST, SSE, or WebSocket. Its developer surface is a desktop
+    extensibility SDK (OLE Automation / COM, an internal scripting engine, and a
+    plugin/starter-pack model) embedded in the Windows application. There is no
+    server, no base URL, and no server-push transport to model.
+findings:
+  summary: |
+    PlanSwift does not publish a documented public WebSocket API - and, more
+    broadly, does not publish a documented public web/REST API at all. PlanSwift
+    is Windows desktop takeoff and estimating software for construction
+    estimators, owned by ConstructConnect. Third parties extend PlanSwift only
+    through a desktop extensibility SDK that ships inside the licensed
+    application: OLE Automation (COM) for driving PlanSwift from external Windows
+    programs, an internal scripting engine, and a plugin + starter-pack model.
+    Access to the developer tools requires enabling a password-gated
+    "Under-The-Hood" (U-T-H) tab, with the password obtained from ConstructConnect
+    (takeoff@constructconnect.com). The only public code artifacts are legacy SDK
+    examples on GitHub for PlanSwift9, written in Pascal (2008) and Visual Basic
+    (2010). No HTTPS base URL, API key/OAuth surface, or documented web endpoints
+    exist, so no WebSocket (ws:// or wss://) endpoint is or could be documented.
+  ownership: |
+    PlanSwift is owned by ConstructConnect. Developer documentation is hosted on
+    the ConstructConnect community help portal, and developer access is granted
+    via takeoff@constructconnect.com.
+  publicWebApi: false
+  accessModel: desktop-plugin-sdk
+  transports:
+    - protocol: OLE Automation (COM)
+      scheme: in-process / local desktop
+      documented: true
+      note: Drive/automate PlanSwift from external Windows applications via the Component Object Model. Local desktop integration, not a network API.
+    - protocol: Scripting
+      scheme: in-application
+      documented: true
+      note: Internal scripting engine for extending PlanSwift behavior from inside the app. Not network-accessible.
+    - protocol: Plugin / Starter Pack
+      scheme: in-application
+      documented: true
+      note: Plugins add features; starter packs add trade-specific templates, parts, and assemblies. Installed into the desktop app.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public HTTPS REST API is documented for PlanSwift.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint exists - PlanSwift has no public network API surface at all.
+  endpointsConfirmedRest: []
+  endpointsModeled: none
+  webApiStatus: none-desktop-sdk-only
+sources:
+  - url: https://help.constructconnect.com/planswift-developer-documentation-234
+    type: Documentation
+    note: PlanSwift developer documentation index on the ConstructConnect help portal.
+  - url: https://help.constructconnect.com/planswift-developer-documentation-234/planswift-developer-documentation-v-2024-12-31-1602
+    type: Documentation
+    note: Developer guide covering API Documentation, Scripting, and OLE Automation; access via a password-gated Under-The-Hood tab (takeoff@constructconnect.com).
+  - url: https://github.com/PlanSwift
+    type: SourceCode
+    note: GitHub org with two repos - sdk-examples-2008 (Pascal) and sdk-examples-2010 (Visual Basic) - both PlanSwift9 desktop SDK examples.
+  - url: https://www.planswift.com/
+    type: Website
+    note: Product marketing site for the desktop takeoff and estimating software.
+  - url: https://www.constructconnect.com/products/planswift
+    type: Website
+    note: ConstructConnect product page confirming ownership.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket - and no public web API of any kind - exists for PlanSwift. The
+    entry documents the honest access model (desktop OLE Automation / COM,
+    scripting, and plugins gated behind an Under-The-Hood tab) rather than
+    fabricating web endpoints. No apis[] were listed in apis.yml and no
+    OpenAPI/AsyncAPI was authored because there is no network API surface to model.
