@@ -15,7 +15,19 @@ description: PlanSwift is Windows desktop takeoff and estimating software for
   (2008) and Visual Basic (2010). There is no documented HTTPS base URL, no API
   keys/OAuth token surface, and no web endpoints to model - this entry is an
   honest stub reflecting a desktop-plugin/COM SDK, not a web API.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Paid · Open access
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/planswift.png
 tags:
 - Construction
 - Takeoff
