@@ -41,7 +41,7 @@ tags:
 - No Public Web API
 created: '2026-07-04'
 modified: '2026-07-04'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 common:
 - type: DomainSecurity
   url: security/planswift-domain-security.yml
