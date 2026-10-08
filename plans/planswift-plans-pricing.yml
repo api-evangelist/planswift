@@ -45,3 +45,26 @@ sources:
   note: ConstructConnect product page - directs to demo/quote; pricing not published.
 - url: https://www.planswift.com/free-trial/
   note: Free trial of the desktop takeoff software.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - seat
+  - subscription
+  units:
+  - seat
+  plans:
+  - name: PlanSwift Professional (perpetual, commonly cited)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: PlanSwift Professional (annual, commonly cited)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods: []
