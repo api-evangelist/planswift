@@ -1,4 +1,4 @@
-# PlanSwift (planswift)
+# PlanSwift
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,65 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PlanSwift is Windows desktop takeoff and estimating software for construction estimators, owned by **ConstructConnect**. It turns digital plans (PDF, image, and CAD) into measurable, countable, exportable material takeoffs and estimates across trades such as roofing, concrete, earthwork, flooring, and electrical.
+PlanSwift is Windows desktop takeoff and estimating software for construction estimators - turning digital plans (PDF/image/CAD) into measurable, countable, exportable material takeoffs and estimates across trades like roofing, concrete, earthwork, flooring, and electrical. PlanSwift is owned by ConstructConnect. IMPORTANT - PlanSwift does NOT publish a public web/REST API. Its developer surface is a desktop extensibility SDK embedded in the Windows application - OLE Automation (COM), an internal scripting engine, and a plugin/starter-pack model - exposed through a password-gated "Under-The-Hood" (U-T-H) tab enabled by contacting ConstructConnect (takeoff@constructconnect.com). The public SDK examples on GitHub target PlanSwift9 and are written in Pascal (2008) and Visual Basic (2010). There is no documented HTTPS base URL, no API keys/OAuth token surface, and no web endpoints to model - this entry is an honest stub reflecting a desktop-plugin/COM SDK, not a web API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/planswift/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/planswift/refs/heads/main/apis.yml)
+**Areas:** Construction · Takeoff · Estimating · Desktop Software · Plugin SDK · OLE Automation · COM · Scripting · ConstructConnect · No Public Web API
 
-## Access model — read this first (honest stub)
+## PlanSwift on APIs.io
 
-**PlanSwift does not publish a public web/REST API.** There is no HTTPS base URL, no API keys or OAuth, and no documented web endpoints. This entry is an honest stub: PlanSwift's developer surface is a **desktop extensibility SDK embedded in the Windows application**, not a network API.
+Everything profiled for PlanSwift is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/planswift/](https://apis.io/providers/planswift/)** — or go straight to one of the APIs or properties below.
 
-Third parties extend PlanSwift through:
+### Published properties
 
-- **OLE Automation (COM)** — drive/automate PlanSwift from external Windows applications via the Component Object Model.
-- **Scripting** — an internal scripting engine for extending PlanSwift behavior from inside the app.
-- **Plugins and Starter Packs** — plugins add features; starter packs add trade-specific templates, parts, and assemblies.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Developer tooling is exposed through a password-gated **"Under-The-Hood" (U-T-H) tab**. The password is obtained by contacting ConstructConnect at **takeoff@constructconnect.com**. ConstructConnect warns that back-end modifications are unsupported and are lost on reinstall.
+#### Security (1)
 
-The only public code artifacts are legacy SDK examples on GitHub for **PlanSwift9**:
+Authentication, trust centre, and vulnerability disclosure.
 
-- `PlanSwift/sdk-examples-2008` — Pascal (2008)
-- `PlanSwift/sdk-examples-2010` — Visual Basic (2010)
+- [Planswift Domain Security](https://apis.io/security/planswift/planswift-domain-security/)
 
-Because there is no network API surface, no OpenAPI or AsyncAPI document was authored and no `apis[]` are listed in `apis.yml`. See `review.yml` for the full assessment.
+#### Plans and pricing (1)
 
-## Tags
+Published plans, tiers and prices.
 
-- Construction
-- Takeoff
-- Estimating
-- Desktop Software
-- Plugin SDK
-- OLE Automation
-- COM
-- Scripting
-- ConstructConnect
-- No Public Web API
+- [Planswift Plans Pricing](https://apis.io/plans/planswift/planswift-plans-pricing/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## Pricing (per seat)
-
-PlanSwift is licensed per seat for the desktop product; the extensibility SDK ships inside the licensed application (there is no separate API subscription). Public pricing is inconsistent and ConstructConnect increasingly quotes directly. Commonly cited public figures:
-
-- ~**$1,749** one-time (perpetual) with first-year updates + support; ~$250/license/year to renew, **or**
-- ~**$2,000** per user per year (annual) with first-year training, updates + support; ~$300/license/year to renew.
-
-A free trial is available at [planswift.com/free-trial](https://www.planswift.com/free-trial/). See `plans/planswift-plans-pricing.yml`. Confirm with a quote via [ConstructConnect](https://www.constructconnect.com/products/planswift).
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/PlanSwift)
-- [LinkedIn](https://www.linkedin.com/company/planswift)
 - [Website](https://www.planswift.com)
 - [Documentation](https://help.constructconnect.com/planswift-developer-documentation-234)
-- [Plans](plans/planswift-plans-pricing.yml)
+- [Blog](https://www.planswift.com/blog/)
+- [GitHub](https://github.com/PlanSwift)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 7.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 5.3 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/planswift/](https://apis.io/providers/planswift/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PlanSwift: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/planswift/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
